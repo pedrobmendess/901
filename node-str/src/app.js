@@ -9,7 +9,7 @@ const Product = require('./models/product')
 const app = express();
 const router = express.Router();
 
-mongoose.connect('mongodb+srv://pedro:loki1005@cluster0.vy7wf.mongodb.net/test');
+mongoose.connect('mongodb+srv://pedro:loki1005@cluster0.vy7wf.mongodb.net/nodestr');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
