@@ -1,7 +1,8 @@
 'use istrict'
 
-const mongoose = require('mongoose');
-const Product = mongoose.model('Product');
+// const mongoose = require('mongoose');
+// const Product = mongoose.model('Product');
+const Product = require('../models/product');
 
 exports.post = (req, res, next) => {
     var product = new Product(req.body);
