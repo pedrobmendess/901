@@ -5,11 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 
-mongoose.connect('mongodb+srv://pedro:loki1005@cluster0.vy7wf.mongodb.net/nodestr',
-{
-    userNewUrlPArser: true,
-    userCreateIndex: true    
-});
+mongoose.connect('mongodb+srv://pedro:loki1005@cluster0.vy7wf.mongodb.net/nodestr');
     
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
