@@ -10,7 +10,7 @@ const schema = new mongoose.Schema({
     },
     slug: {
         type: String,
-        required: [true,'O Slug é obrigatório'],
+        required: [true,'O slug é obrigatório'],
         trim: true,
         index: true,
         unique: true
