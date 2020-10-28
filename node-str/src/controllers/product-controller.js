@@ -1,7 +1,6 @@
 'use istrict';
 // const mongoose = require('mongoose');
 // const Product = mongoose.model('Product');
-const Product = require('../models/product');
 const ValidationContract = require('../validators/fluent-validator');
 const repository = require('../repositories/poducts-repository');
 
