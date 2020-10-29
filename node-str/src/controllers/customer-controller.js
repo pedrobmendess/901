@@ -34,7 +34,10 @@ exports.post = async(req, res, next) => {
             name: req.body.name,
             email: req.body.email,
             password: md5(req.body.password + global.SALT_KEY)
-            })
+            });
+
+            emailService.send(req.body.email, "Bem vindo ao Node-store", global.EMAIL_TMPL.replace('{0}', req.body.name))
+            
             res.status(201).send({
             message: 'Cliente cadastrado com sucesso!'
             });
