@@ -1,4 +1,14 @@
 {
+  "name": "node-str",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js --exec 'node && lint'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "debug": "^4.2.0",
@@ -7,6 +17,9 @@
     "mongoose": "^5.10.9",
     "guid": "^0.0.12",
     "md5": "^2.3.0",
-    "sendgrid": "^5.2.3"
+    "sendgrid": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
