@@ -4,6 +4,8 @@
 const ValidationContract = require('../validators/fluent-validator');
 const repository = require('../repositories/customer-repository');
 const md5 = require('md5');
+const emailService = require('../services/email-services');
+
 
 exports.get = async(req, res, next) => {
     try{
