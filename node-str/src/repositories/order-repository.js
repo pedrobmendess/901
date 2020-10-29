@@ -1,15 +1,15 @@
 'use stricit';
 
 const mongoose = require('mongoose');
-const Customer = mongoose.model('Customer');
+const Order = mongoose.model('Order');
 
 exports.get = async() => {
-    var res = await Customer
+    var res = await Order
         .find({});
     return res;
 }
 
 exports.create = async(data) => {
-    var customer = new Customer(data);
-    await customer.save();
+    var order = new Order(data);
+    await order.save();
 }

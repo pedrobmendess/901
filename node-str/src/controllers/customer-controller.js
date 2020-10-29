@@ -4,6 +4,17 @@
 const ValidationContract = require('../validators/fluent-validator');
 const repository = require('../repositories/customer-repository');
 
+exports.get = async(req, res, next) => {
+    try{
+        var data = await repository.get();
+        res.status(201).send(data);
+    } catch (e) {
+        res.status(500).send({
+            message: 'Deu tudo errado....'
+        })
+    }
+};
+
 exports.post = async(req, res, next) => {
     let contract = new ValidationContract();
     contract.hasMinLen(req.body.name, 3, 'O título deve conter mais de três caracteres');
